@@ -1,0 +1,7 @@
+{
+  "name": "바이브코딩 학교 (Vibe Coding School)",
+  "description": "2015년부터 시작된 전문 코딩 교육 기관 바이브코딩 학교의 공식 웹사이트입니다. 교육 철학, 커리큘럼, 그리고 연도별 성장을 확인하세요.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
