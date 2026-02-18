@@ -25,19 +25,32 @@
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
+<script>
+    // 브라우저 환경에서 process.env 참조 시 에러 방지를 위한 폴리필
+    window.process = {
+        env: {
+            NODE_ENV: 'production',
+            API_KEY: '' // 실제 키는 배포 환경의 환경변수에서 주입됩니다.
+        }
+    };
+</script>
 <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
     "react/": "https://esm.sh/react@^19.2.4/",
     "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.574.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
 </script>
 </head>
 <body class="bg-[#f9fafb] text-slate-800">
     <div id="root"></div>
+    <!-- 앱 진입점 스크립트 로드 -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
